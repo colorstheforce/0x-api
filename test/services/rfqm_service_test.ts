@@ -236,7 +236,7 @@ describe.only('RfqmService', () => {
                     makerAmount: new BigNumber(111),
                     takerToken: 'USDC',
                     takerAmount: new BigNumber(100),
-                    expiry: new BigNumber(inOneMinute),
+                    expiry: new BigNumber(inOneMinute).div(1000), // div by 1000 to get a UNIX timestamp
                 };
                 const expiresNever = {
                     makerToken: 'DAI',
